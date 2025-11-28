@@ -1,0 +1,243 @@
+/* ===== Global styles ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+  color: #e5e7eb;
+}
+
+/* ===== Main app container ===== */
+
+.app {
+  max-width: 1100px;
+  margin: 24px auto 40px;
+  padding: 24px 28px 32px;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+  border: 1px solid #1f2937;
+}
+
+/* ===== Header ===== */
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* ===== Navbar ===== */
+
+nav {
+  margin-top: 18px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #020617;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  border: 1px solid #1e293b;
+}
+
+nav span {
+  font-size: 14px;
+  color: #e5e7eb;
+  cursor: pointer;
+  position: relative;
+}
+
+nav span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  transition: width 0.2s ease;
+}
+
+nav span:hover::after {
+  width: 100%;
+}
+
+/* ===== Layout ===== */
+
+.main {
+  margin-top: 22px;
+}
+
+/* ===== Buttons ===== */
+
+button,
+.nav-btn,
+.primary-btn {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 13px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #0b1120;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+button:hover,
+.nav-btn:hover,
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.55);
+  opacity: 0.95;
+}
+
+button:disabled,
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+  box-shadow: none;
+}
+
+/* ===== Cards / panels ===== */
+
+.panel {
+  background: #020617;
+  border-radius: 14px;
+  padding: 14px 16px 16px;
+  border: 1px solid #1e293b;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+/* Dashboard summary cards – agar tum baad me add karna chaho */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.card {
+  background: #020617;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid #1f2937;
+}
+
+.card-title {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.card-value {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  margin-top: 2px;
+  color: #6b7280;
+}
+
+/* ===== Tables ===== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+table th,
+table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #1e293b;
+  text-align: left;
+}
+
+table th {
+  background: #020617;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+table tr:nth-child(even) td {
+  background: #020617;
+}
+
+table tr:hover td {
+  background: #0b1120;
+}
+
+/* ===== Forms ===== */
+
+.form,
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+input::placeholder {
+  color: #6b7280;
+}
+
+input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px #38bdf8;
+}
+
+/* ===== Misc ===== */
+
+.error-box {
+  margin-top: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(127, 29, 29, 0.85);
+  border: 1px solid #b91c1c;
+  font-size: 13px;
+}
+
+.loading {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #bfdbfe;
+}
+
+.footer {
+  margin-top: 26px;
+  padding-top: 10px;
+  border-top: 1px solid #1e293b;
+  font-size: 12px;
+  color: #9ca3af;
+  text-align: left;
+}
